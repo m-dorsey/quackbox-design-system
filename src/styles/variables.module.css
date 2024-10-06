@@ -1,0 +1,39 @@
+
+:root {
+    /* Default Colors */
+    --background-primary: #FFFDF8;
+    --background-secondary: #99D6DE;
+    --text-color-primary: #99D6DE;
+    --text-color-secondary: #FFFDF8;
+    --text-color-black: #061213;
+    --text-color-black-06: rgba(6, 18, 19, 0.6);
+    --accent-color: #FFE303;
+
+    /* Typography */
+    --font-family: "Poppins", sans-serif;
+    --font-size-xsm: 14px;
+    --font-size-sm: 20px;
+    --font-size-md: 24px;
+    --font-size-lg: 32px;
+
+    --logo-font-family: "Unbounded", sans-serif;
+    --logo-font-size: 40px;
+
+    --font-weight-light: 300;
+    --font-weight-normal: 400;
+    --font-weight-bold: 700;
+
+    /* Border */
+    --border-radius: 8px;
+    --border-thin-primary: 2px solid #99D6DE;
+    --border-thick-primary: 3px solid #99D6DE;
+    --border-color: #99D6DE;
+
+    /* Opacity */
+    --opacity-disabled: 0.5;
+    --oopacity-active: 1;
+
+    /* Box Shadow */
+    --box-shadow-sm: 2px 2px 12px rgba(0, 0, 0, 0.5);
+    --box-shadow-md: 0px 4px 22px 16px rgba(255, 227, 3, 0.15);
+}

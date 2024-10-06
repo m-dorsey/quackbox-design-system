@@ -1,0 +1,7 @@
+
+@import "./variables.module.css";
+
+* {
+    font-family: var(--font-family);
+    color: var(--text-color-primary);
+}

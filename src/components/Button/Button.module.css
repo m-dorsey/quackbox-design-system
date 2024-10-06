@@ -1,0 +1,66 @@
+
+/* Button.module.css */
+
+@import "../../styles/variables.module.css";
+
+.button {
+    display: block;
+    height: 72px;
+    margin: 10px;
+
+    font-size: var(--font-size-md);
+    text-align: center;
+
+    border-radius:  var(--border-radius);
+    border: var(--border-thin-primary);
+
+    background-color: var(--background-primary);
+}
+
+.button:hover:not(.disabled) {
+    cursor: pointer;
+    box-shadow: var(--box-shadow-sm);
+}
+
+.button:active:not(.disabled) {
+    opacity: 0.75;
+}
+
+/* Button Width */
+.default {
+    width: 120px;
+    height: 50px;
+}
+
+.stretch {
+    width: 100%;
+}
+
+.stretch-half {
+    width: 50%;
+}
+
+.square {
+    width: 85px;
+    height: 72px;
+}
+
+/* Button Variant */
+.secondary {
+    background-color: var(--background-secondary);
+    color: var(--text-color-secondary);
+}
+
+/* Button Disabled */
+.disabled {
+    opacity: var(--opacity-disabled);
+}
+
+/* Button Roles */
+.keyboard {
+    background-color: var(--background-primary);
+    color: var(--text-color-black-06);
+
+    text-transform: uppercase;
+    border: none;
+}

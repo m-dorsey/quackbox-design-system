@@ -1,0 +1,6 @@
+
+[data-theme="high-contrast"] {
+    --text-color-primary: #061213;
+    --border-thin-primary: 2px solid #061213;
+    --border-thick-primary: 3px solid #061213;
+}
