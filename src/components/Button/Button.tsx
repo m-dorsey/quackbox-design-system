@@ -16,6 +16,7 @@ interface ButtonProps {
     icon?: ReactNode,
     variant?: "primary" | "secondary"
     width?: "default" | "stretch" | "stretch-half" | "square"
+    boxShadow?: boolean
     className?: string
 
     /** Optional Props **/
@@ -31,6 +32,7 @@ const Button: React.FC<ButtonProps> = ({
     icon,
     variant = "primary",
     width = "stretch",
+    boxShadow = false,
     testId
 
 }) => {
@@ -39,6 +41,7 @@ const Button: React.FC<ButtonProps> = ({
         styles.button,
         styles[variant],
         styles[width],
+        boxShadow && styles.boxShadow,
         buttonRole && styles[buttonRole],
         disabled && styles.disabled,
     ].filter(Boolean).join(" ")
@@ -49,6 +52,7 @@ const Button: React.FC<ButtonProps> = ({
             onClick={onClick}
             type={type}
             disabled={disabled}
+            box-shadow={boxShadow}
             button-role={buttonRole}
             test-id={testId}
         >

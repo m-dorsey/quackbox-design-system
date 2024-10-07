@@ -6,7 +6,6 @@
 .button {
     display: block;
     height: 72px;
-    margin: 10px;
 
     font-size: var(--font-size-md);
     text-align: center;
@@ -54,6 +53,11 @@
 /* Button Disabled */
 .disabled {
     opacity: var(--opacity-disabled);
+}
+
+/* Button Box Shadow */
+.boxShadow {
+    box-shadow: var(--box-shadow-md);
 }
 
 /* Button Roles */
