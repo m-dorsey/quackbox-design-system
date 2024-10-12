@@ -3,17 +3,18 @@
 
 @import "../../styles/variables.module.css";
 
+/* Button Styles */
 .button {
+    background-color: var(--background-primary);
+    color: var(--text-color-primary);
     display: block;
-    height: 72px;
+    height: var(--button-height-lg);
 
     font-size: var(--font-size-md);
     text-align: center;
 
-    border-radius:  var(--border-radius);
+    border-radius: var(--border-radius);
     border: var(--border-thin-primary);
-
-    background-color: var(--background-primary);
 }
 
 .button:hover:not(.disabled) {
@@ -23,9 +24,28 @@
 
 .button:active:not(.disabled) {
     opacity: 0.75;
+}  
+
+/* Button Variant */
+.primary, .primaryIcon {
+    background-color: var(--background-secondary);
+    color: var(--text-color-secondary);
 }
 
-/* Button Width */
+.secondary, .secondaryIcon {
+    background-color: var(--background-primary);
+}
+
+.tertiary, .tertiaryIcon {
+    background-color: unset;
+}
+
+.text, .textIcon {
+    background-color: unset;
+    border: unset;
+}
+
+/* Button Length */
 .default {
     width: 120px;
     height: 50px;
@@ -35,19 +55,22 @@
     width: 100%;
 }
 
-.stretch-half {
+.stretchHalf {
     width: 50%;
 }
 
-.square {
+.block {
     width: 85px;
     height: 72px;
 }
 
-/* Button Variant */
-.secondary {
-    background-color: var(--background-secondary);
-    color: var(--text-color-secondary);
+/* Button Size */
+.sm {
+    height: 50px;
+}
+
+.lg {
+    height: 72px;
 }
 
 /* Button Disabled */
@@ -55,16 +78,9 @@
     opacity: var(--opacity-disabled);
 }
 
-/* Button Box Shadow */
-.boxShadow {
-    box-shadow: var(--box-shadow-md);
-}
-
-/* Button Roles */
-.keyboard {
-    background-color: var(--background-primary);
-    color: var(--text-color-black-06);
-
-    text-transform: uppercase;
-    border: none;
+/* Button Icon */
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

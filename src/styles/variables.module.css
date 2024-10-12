@@ -37,4 +37,8 @@
     /* Box Shadow */
     --box-shadow-sm: 2px 2px 12px rgba(0, 0, 0, 0.5);
     --box-shadow-md: 0px 4px 22px 16px rgba(255, 227, 3, 0.15);
+
+    /* Button Styles */
+    --button-height-sm: 50px;
+    --button-height-lg: 72px;
 }

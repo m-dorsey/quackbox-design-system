@@ -4,45 +4,41 @@ import styles from "./Button.module.css"
 
 interface ButtonProps {
     /** Required Props **/
-    label: string
+    children: ReactNode
 
     /** Action Props **/
     onClick?: () => void
     type?: "button" | "submit" | "reset"
-    disabled?: boolean
-    buttonRole?: "keyboard" | "filter" | "sort"
 
     /** Styling Props **/
-    icon?: ReactNode,
-    variant?: "primary" | "secondary"
-    width?: "default" | "stretch" | "stretch-half" | "square"
-    boxShadow?: boolean
-    className?: string
+    variant?: "primary" | "primaryIcon" | "secondary" | 
+        "secondaryIcon" | "tertiary" | "tertiaryIcon" | 
+        "text" | "textIcon"
+    icon?: ReactNode
+    disabled?: boolean
+    length?: "stretch" | "stretchHalf" | "block" | "default"
+    size?: "sm" | "lg"
 
-    /** Optional Props **/
-    testId?: string
 }
 
 const Button: React.FC<ButtonProps> = ({
-    label,
+    children,
     onClick,
-    type = "button",
-    disabled = false,
-    buttonRole,
-    icon,
+    type,
     variant = "primary",
-    width = "stretch",
-    boxShadow = false,
-    testId
+    icon,
+    disabled,
+    length = "stretch",
+    size = "lg"
 
 }) => {
 
     const classNames = [
         styles.button,
         styles[variant],
-        styles[width],
-        boxShadow && styles.boxShadow,
-        buttonRole && styles[buttonRole],
+        icon && styles.icon,
+        styles[length],
+        styles[size],
         disabled && styles.disabled,
     ].filter(Boolean).join(" ")
 
@@ -51,17 +47,8 @@ const Button: React.FC<ButtonProps> = ({
             className={classNames}
             onClick={onClick}
             type={type}
-            disabled={disabled}
-            box-shadow={boxShadow}
-            button-role={buttonRole}
-            test-id={testId}
         >
-            {
-                label.length == 0 ?
-                    icon
-                :
-                    label
-            }
+            {children}
         </button>
     )
 
