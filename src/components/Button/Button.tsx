@@ -49,6 +49,9 @@ const Button: React.FC<ButtonProps> = ({
     paddingRight,
     paddingTop,
     paddingBottom,
+    flexDirection,
+    justifyContent,
+    alignItems,
     dataTestId
 
 }) => {
@@ -86,6 +89,9 @@ const Button: React.FC<ButtonProps> = ({
                 paddingRight: paddingRight,
                 paddingTop: paddingTop,
                 paddingBottom: paddingBottom,
+                flexDirection: flexDirection,
+                justifyContent: justifyContent,
+                alignItems: alignItems
 
             }}
             

@@ -35,6 +35,9 @@ const Text: React.FC<TextProps> = ({
     paddingRight,
     paddingTop,
     paddingBottom,
+    flexDirection,
+    justifyContent,
+    alignItems,
     dataTestId
 
 }) => {
@@ -66,6 +69,9 @@ const Text: React.FC<TextProps> = ({
                 paddingRight: paddingRight,
                 paddingTop: paddingTop,
                 paddingBottom: paddingBottom,
+                flexDirection: flexDirection,
+                justifyContent: justifyContent,
+                alignItems: alignItems
 
             }}
         >

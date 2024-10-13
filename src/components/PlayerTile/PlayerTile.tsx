@@ -39,17 +39,21 @@ const PlayerTile: React.FC<PlayerTileProps> = ({
     paddingRight,
     paddingTop,
     paddingBottom,
+    flexDirection,
+    justifyContent,
+    alignItems,
     dataTestId
 
 }) => {
 
     const classNames = [
+        className,
         styles.playerTile
     ].filter(Boolean).join(" ")
 
     return (
         <figure
-            className={`${className} ${styles.playerContainer}`}
+            className={styles.playerContainer}
             is-connected={isConnected}
             data-test-id={dataTestId}
 
@@ -69,9 +73,12 @@ const PlayerTile: React.FC<PlayerTileProps> = ({
                 paddingRight: paddingRight,
                 paddingTop: paddingTop,
                 paddingBottom: paddingBottom,
+                flexDirection: flexDirection,
+                justifyContent: justifyContent,
+                alignItems: alignItems
 
             }}
-            
+
         >
             <img className={`${classNames} ${isConnected && styles.isConnected}`} 
                 src={isConnected && iconPath || ""}

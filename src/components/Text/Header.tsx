@@ -37,6 +37,9 @@ const Header: React.FC<HeaderProps> = ({
     paddingRight,
     paddingTop,
     paddingBottom,
+    flexDirection,
+    justifyContent,
+    alignItems,
     dataTestId
 
 }) => {
@@ -70,6 +73,9 @@ const Header: React.FC<HeaderProps> = ({
                     paddingRight: paddingRight,
                     paddingTop: paddingTop,
                     paddingBottom: paddingBottom,
+                    flexDirection: flexDirection,
+                    justifyContent: justifyContent,
+                    alignItems: alignItems
 
                 }}
             >
@@ -98,6 +104,9 @@ const Header: React.FC<HeaderProps> = ({
                 paddingRight: paddingRight,
                 paddingTop: paddingTop,
                 paddingBottom: paddingBottom,
+                flexDirection: flexDirection,
+                justifyContent: justifyContent,
+                alignItems: alignItems
 
             }}
         >
