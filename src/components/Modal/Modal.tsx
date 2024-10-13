@@ -1,19 +1,18 @@
 
-// import Button from "../Button/Button"
 import { ReactNode } from "react"
-import styles from "./Modal.module.css"
-import Heading from "../Text/Heading"
+import { UniversalProps } from "../../types/universalProps"
 import Button from "../Button/Button"
+import styles from "./Modal.module.css"
 
-interface ModalProps {
-    /** Required Props **/
+interface ModalProps extends UniversalProps {
+    // Required Props
     children: ReactNode
     isOpen: true | false
 
-    /** Action Props **/
+    // Action Props
     onClose?: () => void
     
-    /** Styling Props **/
+    // Styling Props
     width?: string
     height?: string
     borderRadius?: string
@@ -25,16 +24,31 @@ const Modal: React.FC<ModalProps> = ({
     children,
     isOpen = false,
     onClose,
+
+    // Universal Props
+    className,
+    style,
     width,
     height,
     borderRadius,
-    border
+    border,
+    margin,
+    marginLeft,
+    marginRight,
+    marginTop,
+    marginBottom,
+    padding,
+    paddingLeft,
+    paddingRight,
+    paddingTop,
+    paddingBottom,
+    dataTestId
 
 }) => {
 
     const classNames = [
-        styles.modal,
-        onClose
+        className,
+        styles.modal
     ].filter(Boolean).join(" ")
 
     if (!open) return null
@@ -48,19 +62,35 @@ const Modal: React.FC<ModalProps> = ({
                 <dialog 
                     className={classNames}
                     open={isOpen}
+                    data-test-id={dataTestId}
+
                     style={{
+                        ...style,
                         width: width,
                         height: height,
                         borderRadius: borderRadius,
-                        border: border
+                        border: border,
+                        margin: margin,
+                        marginLeft: marginLeft,
+                        marginRight: marginRight,
+                        marginTop: marginTop,
+                        marginBottom: marginBottom,
+                        padding: padding,
+                        paddingLeft: paddingLeft,
+                        paddingRight: paddingRight,
+                        paddingTop: paddingTop,
+                        paddingBottom: paddingBottom,
+
                     }}
                 >
+
                     {onClose && 
                         <Button
-                            label="x"
-                            width="square"
+                            className={styles.onClose}
+                            variant="textIcon"
+                            length="block"
                             onClick={onClose}
-                        ></Button>
+                        >&times;</Button>
                     }
 
                     <section className={styles.modalContent}>
@@ -68,9 +98,7 @@ const Modal: React.FC<ModalProps> = ({
                     </section>
 
                 </dialog>}
-
         </div>
-        
     )
 
 }

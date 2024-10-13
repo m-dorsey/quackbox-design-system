@@ -1,4 +1,6 @@
 
+/* Modal.module.css */
+
 @import "../../styles/variables.module.css";
 
 .modalOverlay {
@@ -18,11 +20,6 @@
     background-color: var(--background-primary);
     height: 80vh;
     width: 80vw;
-    
-    /* position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); */
 
     border-radius: var(--border-radius);
     border: var(--border-thick-primary);
@@ -32,4 +29,10 @@
 
 .modalContent {
     /* padding: 20px; */
+}
+
+.onClose {
+    position:inherit;
+    top: 0;
+    right: 0;
 }
