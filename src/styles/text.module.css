@@ -1,7 +1,44 @@
 
+/* text.module.css */
+
 @import "./variables.module.css";
 
 * {
     font-family: var(--font-family);
     color: var(--text-color-primary);
+}
+
+.header {
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Size */
+.xsm {
+    font-size: var(--font-size-xsm) !important;
+}
+
+.sm {
+    font-size: var(--font-size-sm) !important;
+}
+
+.md {
+    font-size: var(--font-size-md) !important;
+}
+
+.lg {
+    font-size: var(--font-size-lg) !important;
+}
+
+/* Header Weight */
+.light {
+    font-weight: 300;
+}
+
+.normal {
+    font-weight: 400;
+}
+
+.bold {
+    font-weight: 700;
 }
