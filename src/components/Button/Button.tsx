@@ -54,6 +54,7 @@ const Button: React.FC<ButtonProps> = ({
 }) => {
 
     const classNames = [
+        className,
         styles.button,
         styles[variant],
         icon && styles.icon,
@@ -64,7 +65,7 @@ const Button: React.FC<ButtonProps> = ({
 
     return (
         <button
-            className={`${className} ${classNames}`}
+            className={classNames}
             onClick={onClick}
             type={type}
             data-test-id={dataTestId}
