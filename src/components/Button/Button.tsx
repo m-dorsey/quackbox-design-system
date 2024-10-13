@@ -1,16 +1,17 @@
 
 import { ReactNode } from "react"
+import { UniversalProps } from "../../types/universalProps"
 import styles from "./Button.module.css"
 
-interface ButtonProps {
-    /** Required Props **/
+interface ButtonProps extends UniversalProps {
+    // Required Props
     children: ReactNode
 
-    /** Action Props **/
+    // Action Props
     onClick?: () => void
     type?: "button" | "submit" | "reset"
 
-    /** Styling Props **/
+    // Styling Props
     variant?: "primary" | "primaryIcon" | "secondary" | 
         "secondaryIcon" | "tertiary" | "tertiaryIcon" | 
         "text" | "textIcon"
@@ -29,7 +30,26 @@ const Button: React.FC<ButtonProps> = ({
     icon,
     disabled,
     length = "stretch",
-    size = "lg"
+    size = "lg",
+
+    // Universal Props
+    className,
+    style,
+    width,
+    height,
+    borderRadius,
+    border,
+    margin,
+    marginLeft,
+    marginRight,
+    marginTop,
+    marginBottom,
+    padding,
+    paddingLeft,
+    paddingRight,
+    paddingTop,
+    paddingBottom,
+    dataTestId
 
 }) => {
 
@@ -44,9 +64,30 @@ const Button: React.FC<ButtonProps> = ({
 
     return (
         <button
-            className={classNames}
+            className={`${className} ${classNames}`}
             onClick={onClick}
             type={type}
+            data-test-id={dataTestId}
+            
+            style={{
+                ...style,
+                width: width,
+                height: height,
+                borderRadius: borderRadius,
+                border: border,
+                margin: margin,
+                marginLeft: marginLeft,
+                marginRight: marginRight,
+                marginTop: marginTop,
+                marginBottom: marginBottom,
+                padding: padding,
+                paddingLeft: paddingLeft,
+                paddingRight: paddingRight,
+                paddingTop: paddingTop,
+                paddingBottom: paddingBottom,
+
+            }}
+            
         >
             {children}
         </button>

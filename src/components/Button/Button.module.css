@@ -17,13 +17,14 @@
     border: var(--border-thin-primary);
 }
 
+/* Button onHover */
 .button:hover:not(.disabled) {
     cursor: pointer;
     box-shadow: var(--box-shadow-sm);
 }
 
 .button:active:not(.disabled) {
-    opacity: 0.75;
+    opacity: var(--opacity-active);
 }  
 
 /* Button Variant */
@@ -66,11 +67,11 @@
 
 /* Button Size */
 .sm {
-    height: 50px;
+    height: var(--button-height-sm);
 }
 
 .lg {
-    height: 72px;
+    height: var(--button-height-lg);
 }
 
 /* Button Disabled */

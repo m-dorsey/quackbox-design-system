@@ -32,7 +32,7 @@
 
     /* Opacity */
     --opacity-disabled: 0.5;
-    --oopacity-active: 1;
+    --opacity-active: 0.75;
 
     /* Box Shadow */
     --box-shadow-sm: 2px 2px 12px rgba(0, 0, 0, 0.5);
