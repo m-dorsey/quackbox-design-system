@@ -1,0 +1,34 @@
+
+/* PlayerTile.module.css */
+
+@import "../../styles/variables.module.css";
+
+.playerContainer {
+    display: flex;
+    flex-direction: column;
+    width: calc(45vw / 2);
+
+    .playerTile {
+        background-color: var(--background-primary);
+        height: calc(45vw / 2);
+
+        border: var(--border-thin-primary);
+        border-radius: var(--border-radius);
+    }
+
+    .playerLabel {
+        margin-top: 20px;
+    }
+
+    .playerTile.isConnected, .playerLabel.isConnected {
+        background-color: var(--background-secondary);
+        color: var(--text-color-secondary);
+        box-shadow: var(--box-shadow-md);
+    }
+
+    .playerLabel.isConnected:hover {
+        background-color: var(--background-primary);
+        color: var(--text-color-primary);
+    }
+
+}
