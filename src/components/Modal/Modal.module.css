@@ -17,18 +17,19 @@
 }
 
 .modal {
+    display: flex;
+    padding: 0;
     background-color: var(--background-primary);
     height: 80vh;
     width: 80vw;
-
     border-radius: var(--border-radius);
     border: var(--border-thick-primary);
-
     overflow: scroll;
-}
 
-.modalContent {
-    /* padding: 20px; */
+    .modalHeader, .modalContent, .modalFooter {
+        display: flex;
+    }
+    
 }
 
 .onClose {

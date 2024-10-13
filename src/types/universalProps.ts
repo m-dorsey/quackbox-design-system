@@ -22,5 +22,9 @@ export interface UniversalProps {
     paddingTop?: string
     paddingBottom?: string
 
+    flexDirection?: CSSProperties["flexDirection"]
+    justifyContent?: CSSProperties["justifyContent"]
+    alignItems?: CSSProperties["alignItems"]
+
     dataTestId?: string
 }
