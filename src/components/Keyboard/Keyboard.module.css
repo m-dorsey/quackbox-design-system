@@ -1,0 +1,38 @@
+
+/* Keyboard.module.css */
+
+@import "../../styles/variables.module.css";
+
+.keyboard {
+    background-color: var(--background-secondary);
+    border-radius: var(--border-radius);
+    width: 68vw;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+
+    .keyboardRow {
+        display: contents;
+
+        .keyboardKey {
+            color: var(--text-color-black-06);
+            border: none;
+        }
+
+        .span3 {
+            grid-column-end: span 3;
+        }
+
+        .span2 {
+            grid-column-end: span 2;
+        }
+
+    }
+
+}
+
+.deleteKey {
+    color: var(--text-color-black-06);
+}
