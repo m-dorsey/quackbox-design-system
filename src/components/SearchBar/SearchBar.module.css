@@ -1,0 +1,24 @@
+
+/* SearchBar.module.css */
+
+@import "../../styles/variables.module.css";
+
+.searchBar {
+    background-color: var(--background-primary);
+    border-radius: var(--border-radius);
+    border: var(--border-thin-primary);
+    width: 68vw;
+    height: var(--button-height-lg);
+    font-size: var(--font-size-md);
+
+    padding: 10px;
+    padding-top: 15px;
+
+    outline: none
+    
+}
+
+::placeholder {
+    font-size: var(--font-size-md);
+    color: var(--text-color-primary);
+}
